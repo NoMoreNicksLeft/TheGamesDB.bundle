@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.theoylerfamily.agents.thegamesdb</string>
+    <key>PlexAgentAttributionText</key>
+    <string>
+        &lt;a href=&quot;http://thegamesdb.net/&quot;&gt;TheGamesDB.net&lt;/a&gt; is an open, online database for video game fans. &lt;br/&gt;
+    </string>
+    <key>PlexFrameworkVersion</key>
+    <string>2</string>
+    <key>PlexPluginClass</key>
+    <string>Agent</string>
+    <key>PlexPluginCodePolicy</key>
+    <string>Elevated</string>
+</dict>
+</plist>
