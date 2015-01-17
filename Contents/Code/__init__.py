@@ -63,7 +63,7 @@ class TGDbAgent(Agent.Movies):
                 Log(" Adding: %s; score: %d" % (title, score))
                 results.Append(MetadataSearchResult(
                     id = id,
-                    name = title + ' (' + shortname[platform_id] + ')',
+                    name = title + ' (' + shortname.shortname[platform_id] + ')',
                     score = score,
                     lang = 'en'
                 ))
