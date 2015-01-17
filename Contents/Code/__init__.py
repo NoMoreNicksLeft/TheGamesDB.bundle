@@ -129,12 +129,12 @@ class TGDbAgent(Agent.Movies):
             metadata.posters[poster_url] = Proxy.Preview(HTTP.Request(thumb_url, sleep=2.0).content)
             current_posters.append(poster_url)
 
-        for poster in xml.xpath("./Game/Images/boxart[@side='back']"):
-            thumb_url = base_path + poster.xpath("./@thumb")[0]
-            poster_url = base_path + poster.xpath("./text()")[0]
+        # for poster in xml.xpath("./Game/Images/boxart[@side='back']"):
+        #     thumb_url = base_path + poster.xpath("./@thumb")[0]
+        #     poster_url = base_path + poster.xpath("./text()")[0]
 
-            metadata.posters[poster_url] = Proxy.Preview(HTTP.Request(thumb_url, sleep=2.0).content)
-            current_posters.append(poster_url)
+        #     metadata.posters[poster_url] = Proxy.Preview(HTTP.Request(thumb_url, sleep=2.0).content)
+        #     current_posters.append(poster_url)
 
         # Remove unavailable posters.
         for key in metadata.posters.keys():
