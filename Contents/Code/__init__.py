@@ -33,8 +33,6 @@ class TGDbAgent(Agent.Movies):
 
     def search(self, results, media, lang, manual): 
 
-        platform = media.name.lower()
-
         # Now we have to parse (potentially) multiple results, and use *all* of those, since if someone clicks on 
         # "fix incorrect match" they should be shown alternates.
         for game in XML.ElementFromURL(url=TGDB_GAME_SEARCH % (String.Quote(media.name)), sleep=2.0).xpath('//Game'):
@@ -96,6 +94,11 @@ class TGDbAgent(Agent.Movies):
             metadata.studio = xml.xpath('./Game/Publisher/text()')[0]
         except:
             metadata.studio = None
+
+        try:
+            metadata.content_rating = xml.xpath('./Game/ESRB/text()')[0]
+        except:
+            metadata.content_rating = None
 
         try:
             # Now it's time for the collections. This should really be its own field, but we work with what we've got.
